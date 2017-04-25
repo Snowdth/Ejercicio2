@@ -1,0 +1,236 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+body {
+  color: #fff;
+}
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+li {
+  list-style: none;
+}
+input {
+  margin: 0;
+  background: 0 0;
+  font-size: 100%;
+}
+.wrapper {
+  height: 100%;
+}
+.wallpaper {
+  background-image: url("../img/wallpaper.jpg");
+  height: 100%;
+  background-size: cover;
+}
+.widgets {
+  top: 0;
+  left: 0;
+  position: absolute;
+  min-height: 100%;
+  width: 100%;
+}
+.center {
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.center-clock h1,
+.greeting h2 {
+  font-weight: 500;
+}
+.center-clock {
+  left: 0;
+  color: #fff;
+}
+.time {
+  color: #fff;
+  display: inline-block;
+  font-size: 1050%;
+  border-radius: 100px;
+}
+.sec,
+#ampm {
+  color: #fff;
+}
+.greeting h2 {
+  font-size: 337.5%;
+  letter-spacing: 0;
+  color: #fff;
+}
+.greeting::before {
+  opacity: 0.1;
+  height: 135px;
+  width: 100%;
+  position: absolute;
+  top: 82%;
+  left: 0;
+  z-index: 2;
+  background: url("../img/overlay-focus.png") 50% 0 no-repeat;
+  background-size: contain;
+  content: ' ';
+}
+.stroke {
+  text-shadow: -1px -1px 1px #000, 1px 1px 1px #000, -1px 1px 1px transparent, 1px -1px 1px transparent;
+}
+.prompt h3 {
+  letter-spacing: 2px;
+  font-weight: 300;
+}
+.prompt input {
+  text-align: center;
+  font-size: 120%;
+  outline: 0;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px solid #fff;
+}
+.center-below {
+  width: 100%;
+  position: absolute;
+  top: 72.5%;
+}
+.focuses {
+  text-align: center;
+  color: #fff;
+}
+.bottom-right {
+  position: absolute;
+  padding: 0 25px 0 15px;
+  bottom: 10px;
+  right: 10px;
+}
+.bottom-right span {
+  cursor: pointer;
+}
+.pane-container {
+  transition: all 0.15s ease;
+}
+.pane-container::before {
+  right: 35px;
+  content: '';
+  border-top: 6px solid #000;
+  border-right: 7px solid transparent;
+  border-left: 7px solid transparent;
+  position: absolute;
+}
+.pane-todo {
+  min-height: 200px;
+  max-height: 535px;
+  background-color: rgba(15,15,15,0.925);
+  overflow-x: hidden;
+  width: 300px;
+  right: 3px;
+  position: absolute;
+  bottom: 100%;
+}
+.pane-todo input {
+  color: #fff;
+}
+.todo-toggle {
+  line-height: 60px;
+}
+.todo-header ul {
+  margin: 0;
+  padding-left: 0px;
+}
+.todo-header ul li {
+  padding: 8px 15px;
+}
+.todo-count {
+  font-size: 90%;
+  opacity: 0.5;
+}
+.empty-todo {
+  padding: 15px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+}
+.content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-top: -12px;
+}
+.graphic {
+  font-size: 400%;
+  font-weight: 100;
+  opacity: 0.9;
+}
+.title {
+  font-size: 90%;
+  margin: -5px 0 8px;
+  opacity: 0.9;
+}
+.description {
+  font-size: 80%;
+  opacity: 0.5;
+}
+.todo-list {
+  max-height: 449px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.todo-list .control {
+  height: 12px;
+  width: 12px;
+  right: 0;
+  position: absolute;
+  border-radius: 100%;
+  cursor: pointer;
+  line-height: 12px;
+  text-align: center;
+}
+.todo-list .destroy {
+  padding: 3px;
+  right: 10px;
+  border: 1px solid rgba(255,255,255,0);
+  cursor: pointer;
+  font-size: 10px;
+  opacity: 1;
+}
+.todo-input {
+  position: absolute;
+  bottom: 0;
+  color: #fff;
+  background-color: transparent;
+  font-size: 15px;
+  padding: 8px 15px 13px;
+  border: 0;
+  width: 100%;
+  font-weight: 500;
+  outline: 0;
+  box-sizing: border-box;
+}
+.todo-item {
+  padding-left: 15px;
+  font-size: 15px;
+  line-height: 120%;
+}
+.todo-item label {
+  left: 0;
+  top: 0;
+  height: 100%;
+  padding-right: 5px;
+  line-height: 15px;
+}
+.view {
+  padding: 2px 0;
+  position: relative;
+}

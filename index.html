@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+
+	<div class="wrapper" id="ejercicioApp">
+		<div class="wallpaper"></div>
+		<div class="widgets">
+
+
+		<!-- INICIO CENTER -->
+			<div class="center">
+				<div class="center-clock">
+					<h1 class="time stroke">6:11</h1>
+					<span class="sec stroke">20</span>
+					<span id="ampm" class="stroke">AM</span>
+				</div>
+				<div class="greeting stroke">
+					<h2>Buenas tardes, Alriez.</h2>
+				</div>
+			</div>
+
+			<div class="center-below">
+				<div class="focuses">
+					<div class="prompt">
+						<h3 class="stroke">Enfoque principal del día</h3>
+						<input type="text" onFocus="this.style.color='white'">
+					</div>
+				</div>
+			</div>
+		<!-- INICIO FINAL -->
+
+
+			<div class="bottom-right">
+				<div class="pane-container" v-show="showTareas">
+					<div class="pane-todo">
+
+						<div class="todo-header">
+							<ul>
+								<li>
+									<span class="todo-count">0 to do</span>
+								</li>
+							</ul>
+						</div>
+
+						<div class="empty-todo">
+							<div class="content">
+								<div class="graphic">☺</div>
+								<div class="title">Nada que hacer</div>
+								<div class="description">Añadir una tarea para empezar</div>
+							</div>
+						</div>
+
+						<ol class="todo-list">
+
+
+							<li class="todo-item" is="todo-component"
+								v-for="(tarea, index) in tareas"
+								v-bind:key="tarea"
+								v-bind:title="tarea"
+								v-on:remove="tareas.splice(index, 1)">
+								<!-- <div class="view">
+									<i class="control destroy">✕</i>
+									<label>
+										<input class="todo-item-checkbox" type="checkbox">
+									</label>
+									<span class="todo-item-title">{{tareas.name}}</span>
+								</div> -->
+							</li>
+
+
+						</ol>
+
+						<input v-model="newTarea" class="todo-input" placeholder="Nueva Tarea" v-on:keyup.enter="addNewTodo">
+					</div>
+				</div>
+
+				<span class="todo-toggle" v-on:click= "clickTodo">Todo</span>
+			</div>
+
+
+		</div>
+	</div>
+
+
+	<script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/vue@2.2.6"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
